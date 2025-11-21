@@ -1,2 +1,2 @@
-# Wealth-Being
+# Wealth-Being App
 
