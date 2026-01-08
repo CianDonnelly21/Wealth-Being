@@ -44,6 +44,14 @@
 //*****************************************************************************************************************
 
                     return (
+                        //Background image to fill screen
+                        <Box sx = {{
+                                backgroundImage: "url('/images/Background_Img.png')",
+                                backgroundSize: 'cover',
+                                opacity: 0.8
+                            }}
+                        >
+
                         <Container maxWidth = "sm">
 
                             {/* Centers everything on the screen */}
@@ -52,7 +60,7 @@
                                     display: 'flex',
                                     flexDirection: 'column',
                                     justifyContent: 'center',
-                                    alignItems: 'center'
+                                    alignItems: 'center',
                                 }}
                             >
 
@@ -77,8 +85,8 @@
                                     <Box sx = {{
                                         position: 'absolute',
                                         inset: 0,
-                                        backgroundColor: '#212121', //Color change
-                                        opacity: 0.5,
+                                        backgroundColor: '#212121',
+                                        opacity: 0.4,
                                         zIndex: 0,
                                         borderRadius: 2
                                     }}
@@ -103,12 +111,12 @@
                                 {/* Text field positioning */}
                                 <Box sx = {{
                                         width: '100%',
-                                        textAlign: 'center'
+                                        textAlign: 'center',
                                     }}
                                 >
 
                                     {/* Email input field */}
-                                    <TextField
+                                    <TextField sx = {{ backgroundColor: '#ffff' }}
                                         required
                                         id = "email"
                                         label = "Email"
@@ -118,7 +126,7 @@
                                     />
 
                                     {/* Password input field */}
-                                    <TextField
+                                    <TextField sx = {{ backgroundColor: '#ffff' }}
                                         margin = "normal"
                                         required
                                         name = "password"
@@ -140,7 +148,7 @@
                                     {/* Login button */}
                                     <Button type = "submit" fullWidth variant = "contained" sx = {{
                                             marginTop: 5,
-                                            backgroundColor:'#4caf50',
+                                            backgroundColor:'#18A558',
                                             width: 190,
                                             fontSize: '18px',
                                             borderRadius: 2
@@ -168,7 +176,7 @@
                                     {/* Register button */}
                                     <Button type = "submit" variant = "contained" sx = {{
                                             marginBottom: 5,
-                                            backgroundColor:'#4caf50',
+                                            backgroundColor:'#18A558',
                                             width: 190,
                                             fontSize: '15px',
                                             borderRadius: 2
@@ -176,11 +184,12 @@
                                     >
                                         <a href = "./register.page.js" style = {{ textDecoration: "none", color: "inherit", padding: 0.5, }}> REGISTER </a>
                                     </Button>
+                                </Box>
                             </Box>
                         </Box>
                     </Box>
                 </Box>
-            </Box>
-        </Container>
+            </Container>
+        </Box>
     );
 }
