@@ -28,10 +28,10 @@
             console.log("Sent Email: " + email)
             console.log("Sent Password: " + password)
 
-            {/* Insert DB here */}
+            //Insert DB here
         };
 
-        {/* Insert DB logic for checking to see if the user logging in is actually registered */}
+        //Insert DB logic for checking to see if the user logging in is actually registered
 
 //*****************************************************************************************************************
 //Line 10:
@@ -43,97 +43,144 @@
           //Is submitted the email and password are retrieved (FormData) and printed to the console once submitted
 //*****************************************************************************************************************
 
-            return (
-                <Container maxWidth="sm">
+                    return (
+                        <Container maxWidth = "sm">
 
-                    {/* Centers everything on the screen */}
-                    <Box sx = {{
-                            height: '100vh',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                        }}
-                    >
+                            {/* Centers everything on the screen */}
+                            <Box sx = {{
+                                    height: '100vh',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }}
+                            >
 
-                    {/* Form submit handler */}
-                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{
-                            position: 'relative',
-                            width: '100%',
-                            maxWidth: 400,
-                            borderRadius: 2,
-                            overflow: 'hidden',
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            padding: 2.5,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center'
-                        }}
-                    >
+                            {/* Form submit handler */}
+                            <Box component = "form" onSubmit = {handleSubmit} noValidate sx = {{
+                                    position: 'relative',
+                                    width: '100%',
+                                    maxWidth: 400,
+                                    borderRadius: 2,
+                                    overflow: 'hidden',
+                                    padding: 4,
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center'
+                                }}
+                            >
 
-                    {/* Background of/and form inputs */}
-                    <Box sx={{ position: 'relative', zIndex: 2 }}>
+                            {/* Background of/and form inputs */}
+                            <Box sx = {{ position: 'relative' }}>
 
-                        {/* Form Background */}
-                            <Box sx={{
-                                position: 'absolute',
-                                inset: 0,
-                                backgroundColor: 'rgba(0,0,0,0.4)',
-                                zIndex: 0
-                            }}
-                        />
+                                {/* Form Background */}
+                                    <Box sx = {{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        backgroundColor: '#212121', //Color change
+                                        opacity: 0.5,
+                                        zIndex: 0,
+                                        borderRadius: 2
+                                    }}
+                                />
 
-                        {/* Email input field */}
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="email"
-                            label="Email"
-                            name="email"
-                            autoComplete="email"
-                            autoFocus
-                        />
+                                {/* Header for form */}
+                                <h1 style = {{
+                                    padding: 2,
+                                    textAlign: 'center'
+                                }}>
+                                    Login Below
+                                </h1>
 
-                        {/* Password input field */}
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
-                            id="password"
-                            autoComplete="current-password"
-                        />
+                                {/* Spacing for background of form */}
+                                <Box sx = {{
+                                        position: 'relative',
+                                        zIndex: 1,
+                                        padding: 4
+                                    }}
+                                >
 
-                        {/* Submit button */}
-                        <Button type="submit" fullWidth variant="contained" sx={{
-                                marginTop: 3,
-                                marginBottom: 2,
-                                backgroundColor:'#4caf50'
-                            }}
-                        >
-                            <a href = "Customer" style={{ textDecoration: "none", color: "inherit" }}> LOGIN </a>
-                        </Button>
+                                {/* Text field positioning */}
+                                <Box sx = {{
+                                        width: '100%',
+                                        textAlign: 'center'
+                                    }}
+                                >
 
-                        {/* Footer section with link to the register page */}
-                        <div style = {{
-                                height: '10vh',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'flex-end',
-                                alignItems: 'center',
-                                paddingBottom: 40,
-                                textAlign: 'center'
-                            }}
-                        >
-                            <p> Don't have account? <a href = "/Register"> Register here</a> </p>
-                        </div>
+                                    {/* Email input field */}
+                                    <TextField
+                                        required
+                                        id = "email"
+                                        label = "Email"
+                                        name = "email"
+                                        autoComplete = "email"
+                                        autoFocus
+                                    />
+
+                                    {/* Password input field */}
+                                    <TextField
+                                        margin = "normal"
+                                        required
+                                        name = "password"
+                                        label = "Password"
+                                        type = "password"
+                                        id = "password"
+                                        autoComplete = "current-password"
+                                    />
+
+                                </Box>
+
+                                {/* Login button positioning */}
+                                <Box sx = {{
+                                        width: '100%',
+                                        textAlign: 'center'
+                                    }}
+                                >
+
+                                    {/* Login button */}
+                                    <Button type = "submit" fullWidth variant = "contained" sx = {{
+                                            marginTop: 5,
+                                            backgroundColor:'#4caf50',
+                                            width: 190,
+                                            fontSize: '18px',
+                                            borderRadius: 2
+                                        }}
+                                    >
+                                        <a href = "./customer.page.js" style = {{ textDecoration: "none", color: "inherit" }}> LOGIN </a>       {/* Home page directory & file name needed here */}
+                                    </Button>
+
+                                </Box>
+
+                                {/* Register button positioning */}
+                                <Box sx = {{
+                                        width: '100%',
+                                        textAlign: 'center'
+                                    }}
+                                >
+                                    <p style = {{
+                                            marginTop: 100,
+                                            fontSize: '22px'
+                                        }}
+                                    >
+                                        Don't have an account ?
+                                    </p>
+
+                                    {/* Register button */}
+                                    <Button type = "submit" variant = "contained" sx = {{
+                                            marginBottom: 5,
+                                            backgroundColor:'#4caf50',
+                                            width: 190,
+                                            fontSize: '15px',
+                                            borderRadius: 2
+                                        }}
+                                    >
+                                        <a href = "./register.page.js" style = {{ textDecoration: "none", color: "inherit", padding: 0.5, }}> REGISTER </a>
+                                    </Button>
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
-            </Container>
-        );
-    }
+            </Box>
+        </Container>
+    );
+}
