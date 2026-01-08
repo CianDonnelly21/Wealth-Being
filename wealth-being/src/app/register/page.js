@@ -22,11 +22,17 @@
             event.preventDefault();
 
         const data = new FormData(event.currentTarget);
+            let fullName = data.get("Full Name")
             let email = data.get("Email")
-            let password = data.get("Password")
+            let confirmEmail = data.get("Confirm Email")
+            let createPassword = data.get("Create Password")
+            let verifyPassword = data.get("Verify Password")
 
+            console.log("Sent Full Name: " + fullName)
             console.log("Sent Email: " + email)
-            console.log("Sent Password: " + password)
+            console.log("Sent Confirm Email: " + confirmEmail)
+            console.log("Sent Create Password: " + createPassword)
+            console.log("Sent Verify Password: " + verifyPassword)
 
             //Insert DB here
         };
@@ -97,7 +103,7 @@
                                     padding: 2,
                                     textAlign: 'center'
                                 }}>
-                                    Login Below
+                                    Register Below
                                 </h1>
 
                                 {/* Spacing for background of form */}
@@ -115,6 +121,17 @@
                                     }}
                                 >
 
+                                    {/* Full name input field */}
+                                    <TextField sx = {{ backgroundColor: '#ffff' }}
+                                        margin = "normal"
+                                        required
+                                        name = "password"
+                                        label = "Password"
+                                        type = "password"
+                                        id = "password"
+                                        autoComplete = "current-password"
+                                    />
+
                                     {/* Email input field */}
                                     <TextField sx = {{ backgroundColor: '#ffff' }}
                                         required
@@ -125,7 +142,30 @@
                                         autoFocus
                                     />
 
-                                    {/* Password input field */}
+
+                                    {/* Confirm email input field */}
+                                    <TextField sx = {{ backgroundColor: '#ffff' }}
+                                        margin = "normal"
+                                        required
+                                        name = "password"
+                                        label = "Password"
+                                        type = "password"
+                                        id = "password"
+                                        autoComplete = "current-password"
+                                    />
+
+                                    {/* Create password input field */}
+                                    <TextField sx = {{ backgroundColor: '#ffff' }}
+                                        margin = "normal"
+                                        required
+                                        name = "password"
+                                        label = "Password"
+                                        type = "password"
+                                        id = "password"
+                                        autoComplete = "current-password"
+                                    />
+
+                                    {/* Verify password input field */}
                                     <TextField sx = {{ backgroundColor: '#ffff' }}
                                         margin = "normal"
                                         required
@@ -154,7 +194,7 @@
                                             borderRadius: 2
                                         }}
                                     >
-                                        <a href = "./customer.page.js" style = {{ textDecoration: "none", color: "inherit" }}> LOGIN </a>       {/* Home page directory & file name needed here */}
+                                        <a href = "./customer.page.js" style = {{ textDecoration: "none", color: "inherit" }}> REGISTER </a>       {/* Home page directory & file name needed here */}
                                     </Button>
 
                                 </Box>
@@ -170,7 +210,7 @@
                                             fontSize: '22px'
                                         }}
                                     >
-                                        Don't have an account ?
+                                        Already have an account ?
                                     </p>
 
                                     {/* Register button */}
@@ -182,7 +222,7 @@
                                             borderRadius: 2
                                         }}
                                     >
-                                        <a href = "/register" style = {{ textDecoration: "none", color: "inherit", padding: 0.5, }}> REGISTER </a>
+                                        <a href = "/register" style = {{ textDecoration: "none", color: "inherit", padding: 0.5, }}> LOGIN HERE </a>
                                     </Button>
                                 </Box>
                             </Box>
