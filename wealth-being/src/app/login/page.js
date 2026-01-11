@@ -44,7 +44,7 @@
 //*****************************************************************************************************************
 
                     return (
-                        //Background image to fill screen
+
                         <Box sx = {{
                                 backgroundImage: "url('/images/Background_Img.png')",
                                 backgroundSize: 'cover',
@@ -70,7 +70,7 @@
                                     width: '100%',
                                     maxWidth: 400,
                                     borderRadius: 2,
-                                    overflow: 'hidden',
+                                    overflow: 'auto',
                                     padding: 4,
                                     display: 'flex',
                                     flexDirection: 'column',
@@ -154,7 +154,7 @@
                                             borderRadius: 2
                                         }}
                                     >
-                                        <a href = "./customer.page.js" style = {{ textDecoration: "none", color: "inherit" }}> LOGIN </a>       {/* Home page directory & file name needed here */}
+                                        <a href = "/" style = {{ textDecoration: "none", color: "inherit" }}> LOGIN </a>       {/* Home page directory & file name needed here */}
                                     </Button>
 
                                 </Box>
@@ -182,7 +182,7 @@
                                             borderRadius: 2
                                         }}
                                     >
-                                        <a href = "/register" style = {{ textDecoration: "none", color: "inherit", padding: 0.5, }}> REGISTER </a>
+                                        <a href = "register/" style = {{ textDecoration: "none", color: "inherit", padding: 0.5, }}> REGISTER </a>
                                     </Button>
                                 </Box>
                             </Box>

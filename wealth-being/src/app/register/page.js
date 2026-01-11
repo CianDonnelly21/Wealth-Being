@@ -50,7 +50,7 @@
 //*****************************************************************************************************************
 
                     return (
-                        //Background image to fill screen
+
                         <Box sx = {{
                                 backgroundImage: "url('/images/Background_Img.png')",
                                 backgroundSize: 'cover',
@@ -76,7 +76,7 @@
                                     width: '100%',
                                     maxWidth: 400,
                                     borderRadius: 2,
-                                    overflow: 'hidden',
+                                    overflow: 'auto',
                                     padding: 4,
                                     display: 'flex',
                                     flexDirection: 'column',
@@ -125,21 +125,22 @@
                                     <TextField sx = {{ backgroundColor: '#ffff' }}
                                         margin = "normal"
                                         required
-                                        name = "password"
-                                        label = "Password"
-                                        type = "password"
-                                        id = "password"
-                                        autoComplete = "current-password"
+                                        name = "fullName"
+                                        label = "Full Name"
+                                        type = "fullName"
+                                        id = "fullName"
+                                        autoComplete = "fullName"
                                     />
 
                                     {/* Email input field */}
                                     <TextField sx = {{ backgroundColor: '#ffff' }}
+                                        margin = "normal"
                                         required
-                                        id = "email"
-                                        label = "Email"
                                         name = "email"
+                                        label = "Email"
+                                        id = "email"
+                                        type = "email"
                                         autoComplete = "email"
-                                        autoFocus
                                     />
 
 
@@ -147,33 +148,33 @@
                                     <TextField sx = {{ backgroundColor: '#ffff' }}
                                         margin = "normal"
                                         required
-                                        name = "password"
-                                        label = "Password"
-                                        type = "password"
-                                        id = "password"
-                                        autoComplete = "current-password"
+                                        name = "confirmEmail"
+                                        label = "Confirm Email"
+                                        type = "confirmEmail"
+                                        id = "confirmEmail"
+                                        autoComplete = "confirmEmail"
                                     />
 
                                     {/* Create password input field */}
                                     <TextField sx = {{ backgroundColor: '#ffff' }}
                                         margin = "normal"
                                         required
-                                        name = "password"
-                                        label = "Password"
-                                        type = "password"
-                                        id = "password"
-                                        autoComplete = "current-password"
+                                        name = "createPassword"
+                                        label = "Create Password"
+                                        type = "createPassword"
+                                        id = "createPassword"
+                                        autoComplete = "createPassword"
                                     />
 
                                     {/* Verify password input field */}
                                     <TextField sx = {{ backgroundColor: '#ffff' }}
                                         margin = "normal"
                                         required
-                                        name = "password"
-                                        label = "Password"
-                                        type = "password"
-                                        id = "password"
-                                        autoComplete = "current-password"
+                                        name = "verifyPassword"
+                                        label = "Verify Password"
+                                        type = "verifyPassword"
+                                        id = "verifyPassword"
+                                        autoComplete = "verifyPassword"
                                     />
 
                                 </Box>
@@ -194,7 +195,7 @@
                                             borderRadius: 2
                                         }}
                                     >
-                                        <a href = "./customer.page.js" style = {{ textDecoration: "none", color: "inherit" }}> REGISTER </a>       {/* Home page directory & file name needed here */}
+                                        <a href = "login/" style = {{ textDecoration: "none", color: "inherit" }}> REGISTER </a>       {/* Home page directory & file name needed here */}
                                     </Button>
 
                                 </Box>
@@ -222,7 +223,7 @@
                                             borderRadius: 2
                                         }}
                                     >
-                                        <a href = "/register" style = {{ textDecoration: "none", color: "inherit", padding: 0.5, }}> LOGIN HERE </a>
+                                        <a href = "login/" style = {{ textDecoration: "none", color: "inherit", padding: 0.5, }}> LOGIN HERE </a>
                                     </Button>
                                 </Box>
                             </Box>
