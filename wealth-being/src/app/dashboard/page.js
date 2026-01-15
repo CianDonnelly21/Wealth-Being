@@ -18,15 +18,16 @@ import Grid from '@mui/material/Grid';
 
 export default function Page() {
   return (
-<Box sx={{ minHeight: '100vh', backgroundImage: 'url(/images/dashboardBG.png)', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column' }}>
-    <Header />
-    <Container maxWidth="lg" sx={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', padding: 4, borderRadius: 2, mt: 2 }}>
-    <Typography component="h1" variant="h3" sx={{ color: '#21B6A8', textAlign: 'center', fontFamily: 'Pacifico, cursive', mb: 3 }}>Quote of the Day</Typography>
+        
+      <Box sx={{minHeight: '100vh', backgroundColor: '#E9F1EC', display:'flex', flexDirection: 'column' }}>
+        <Header />
+        <Container maxWidth="lg" sx={{ backgroundColor: '#FAFBF8', padding: 4, borderRadius: 2, mt: 2 }}>
+          <Typography component="h1" variant="h3" sx={{ color: '#5fa3a6', textAlign: 'center', fontFamily: 'Pacifico, cursive', mb: 3 }}>Quote of the Day</Typography>
 
-    <Grid container spacing={3} justifyContent="center">
-
-    <Grid item xs={12} md={6}>
-        <Card sx={{ maxWidth: 400, margin: 'auto' }}>
+      <Grid container spacing={3} justifyContent="center">
+      
+      <Grid item xs={12} md={6}>
+        <Card sx={{ maxWidth: 400, margin: 'auto', borderRadius: 2 }}>
           <CardActionArea>
           <CardMedia
           component="img"
@@ -34,14 +35,14 @@ export default function Page() {
           image="/images/diaryIcon.jpeg"
           alt="diary icon"
           />
-          <CardContent sx={{ color: '#21B6A8'} }>
+          <CardContent sx={{ color: '#5FA3A6'} }>
             <Typography gutterBottom variant="h5" component="div">Diary</Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>Write down your thoughts and how you were feeling throughout your day today.</Typography>
           </CardContent>
           </CardActionArea>
           <CardActions>
-            <Link href="/diary" passHref>
-            <Button size="small" color="21B6A8">
+            <Link href="/diary" >
+            <Button size="small" sx={{ color: '#5FA3A6', fontWeight: 'bold'}}>
               Visit
             </Button>
             </Link>
@@ -49,7 +50,7 @@ export default function Page() {
         </Card>
       </Grid>
 
-    <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={6}>
         <Card sx={{ maxWidth: 400, margin: 'auto' }}>
         <CardActionArea>
           <CardMedia
@@ -58,14 +59,14 @@ export default function Page() {
             image="/images/chatbotIcon.jpeg"
             alt="chatbot icon"
           />
-        <CardContent sx={{ color: '#21B6A8'}}>
+        <CardContent sx={{ color: '#5FA3A6'}}>
         <Typography gutterBottom variant="h5" component="div">Chatbot</Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>Talk to our supportive chatbot and get feedback to improve your experience.</Typography>
         </CardContent>
         </CardActionArea>
         <CardActions>
-          <Link href="/chatbot" passHref>
-          <Button size="small" color="#21B6A8">
+          <Link href="/chatbot" >
+          <Button size="small" sx={{ color: '#5FA3A6', fontWeight: 'bold'}}>
             Visit
           </Button>
           </Link>
@@ -73,6 +74,7 @@ export default function Page() {
         </Card>
       </Grid>
 
+  
     <Grid item xs={12} md={6}>
       <Card sx={{ maxWidth: 400, margin: 'auto' }}>
         <CardActionArea>
@@ -82,14 +84,14 @@ export default function Page() {
             image="/images/goalsIcon.jpeg"
             alt="goals icon"
           />
-        <CardContent sx={{ color: '#21B6A8'}}>
+        <CardContent sx={{ color: '#5FA3A6'}}>
         <Typography gutterBottom variant="h5" component="div">Analytics</Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>View a graph of your feelings overtime to see how you are progressing.</Typography>
         </CardContent>
         </CardActionArea>
         <CardActions>
-          <Link href="/analytics" passHref>
-          <Button size="small" color="#21B6A8">
+          <Link href="/analytics" >
+          <Button size="small" sx={{ color: '#5FA3A6', fontWeight: 'bold'}}>
             Visit
           </Button>
           </Link>
@@ -106,14 +108,14 @@ export default function Page() {
             image="/images/moodTrackerIcn.jpeg"
             alt="mood tracker icon"
           />
-        <CardContent sx={{ color: '#21B6A8'}}>
+        <CardContent sx={{ color: '#5FA3A6'}}>
         <Typography gutterBottom variant="h5" component="div">Mood Tracker</Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>Document your mood on a scale of 1 - 5 and choose your mood to best represent how you felt today. </Typography>
         </CardContent>
         </CardActionArea>
         <CardActions>
-          <Link href="/moodTracker" passHref>
-          <Button size="small" color="#21B6A8">
+          <Link href="/moodTracker" >
+          <Button size="small" sx={{ color: '#5FA3A6', fontWeight: 'bold'}}>
             Visit
           </Button>
           </Link>
@@ -121,7 +123,10 @@ export default function Page() {
         </Card>
       </Grid>
       </Grid>
-</Container>
-</Box>
-)
+  </Container>
+  </Box>
+
+  )
 }
+
+
