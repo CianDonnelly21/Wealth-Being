@@ -5,7 +5,6 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Header from '../components/Header';
@@ -60,73 +59,69 @@ export default function DiaryPage() {
     }
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <div style={{ flexGrow: 1 }}>
             <Header />
-            <Container maxWidth="sm" sx={{ mt: 4 }}>
-                <Typography variant="h4" gutterBottom>
+            <Container maxWidth="md" sx={{ mt: 6, px: 4 }}>
+                <Typography variant="h2" gutterBottom sx={{ fontSize: '3rem', mb: 4 }}>
                     Daily Entry
                 </Typography>
                 <form onSubmit={handleSubmit}>
                     <TextField
                         label="How are you feeling today?"
                         multiline
-                        rows={4}
+                        rows={6}
                         fullWidth
                         value={entry}
                         onChange={(e) => setEntry(e.target.value)} //updates the react state variable to keep data in sync
+                        sx={{ 
+                            '& .MuiInputBase-root': { fontSize: '1.25rem', padding: '16px' },
+                            '& .MuiInputLabel-root': { fontSize: '1.1rem' }
+                        }}
                     />
-                    <Button type="submit" variant="contained" sx={{ mt: 2 }}>Submit</Button>
+                    <Button type="submit" variant="contained" sx={{ mt: 3, py: 2, px: 4, fontSize: '1.2rem' }}>Submit</Button>
                 </form>
                 
                 {/* Past Entries Section */}
-                <Box sx={{ mt: 6 }}>
-                    <Typography variant="h4" gutterBottom>
+                <div style={{ marginTop: '64px' }}>
+                    <Typography variant="h2" gutterBottom sx={{ fontSize: '2.5rem', mb: 4 }}>
                         Past Entries
                     </Typography>
-                    <Box
-                        sx={{
+                    <div
+                        style={{
                             display: 'flex',
-                            gap: 2,
+                            gap: '16px',
                             overflowX: 'auto',
-                            pb: 2,
-                            '&::-webkit-scrollbar': {
-                                height: '8px',
-                            },
-                            '&::-webkit-scrollbar-track': {
-                                bgcolor: '#f1f1f1',
-                            },
-                            '&::-webkit-scrollbar-thumb': {
-                                bgcolor: '#888',
-                                borderRadius: '4px',
-                            },
+                            paddingBottom: '16px',
                         }}
+                        className="scrollbar-custom"
                     >
                         {pastEntries.map((pastEntry) => (
                             <Card
                                 key={pastEntry._id}
                                 sx={{
-                                    minWidth: 200,
-                                    borderRadius: '12px',
+                                    minWidth: 300,
+                                    borderRadius: '16px',
                                     border: '1px solid #ddd',
-                                    boxShadow: 'none',
+                                    boxShadow: 2,
+                                    padding: 2,
                                 }}
                             >
-                                <CardContent>
-                                    <Typography variant="body1" sx={{ fontWeight: 500, mb: 1 }}>
-                                        {pastEntry.data.length > 50 ? 
-                                            pastEntry.data.substring(0, 50) + '...' : 
+                                <CardContent sx={{ padding: '24px' }}>
+                                    <Typography variant="h6" sx={{ fontWeight: 500, mb: 2, fontSize: '1.1rem' }}>
+                                        {pastEntry.data.length > 80 ? 
+                                            pastEntry.data.substring(0, 80) + '...' : 
                                             pastEntry.data}
                                     </Typography>
-                                    <Typography variant="body2" color="text.secondary">
+                                    <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1rem' }}>
                                         {new Date(pastEntry.timestamp).toLocaleDateString()}
                                     </Typography>
                                 </CardContent>
                             </Card>
                         ))}
-                    </Box>
-                </Box>
+                    </div>
+                </div>
             </Container>
 
-        </Box>
+        </div>
     )
 }

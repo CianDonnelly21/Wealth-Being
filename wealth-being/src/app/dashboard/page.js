@@ -3,16 +3,14 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-//google font import
-import { Pacifico } from 'next/font/google';
-//MUI import for card components
+import { pacifico } from '../fonts/fonts';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
-import Header from '../../components/header';
+import Header from '../components/Header';
 import Grid from '@mui/material/Grid';
 
 
@@ -22,7 +20,7 @@ export default function Page() {
       <Box sx={{minHeight: '100vh', backgroundColor: '#E9F1EC', display:'flex', flexDirection: 'column' }}>
         <Header />
         <Container maxWidth="lg" sx={{ backgroundColor: '#FAFBF8', padding: 4, borderRadius: 2, mt: 2 }}>
-          <Typography component="h1" variant="h3" sx={{ color: '#5fa3a6', textAlign: 'center', fontFamily: 'Pacifico, cursive', mb: 3 }}>Quote of the Day</Typography>
+          <Typography component="h1" variant="h3" sx={{ color: '#5fa3a6', textAlign: 'center', mb: 3 }} className={`${pacifico.className} font-pacifico`}>Quote of the Day</Typography>
 
       <Grid container spacing={3} justifyContent="center">
       

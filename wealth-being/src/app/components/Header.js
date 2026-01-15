@@ -6,33 +6,27 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Image from 'next/image';
-import { Pacifico } from 'next/font/google';
-
-// google font for WealthBeing text
-const pacifico = Pacifico({ 
-  weight: '400',
-  subsets: ['latin'] 
-});
+import { pacifico } from '../fonts/fonts';
 
 export default function Header() {
   return (
-    <AppBar position="static" sx={{ bgcolor: 'white', boxShadow: 1 }}>
-      <Toolbar>
-        <Typography variant="h5" className={pacifico.className} sx={{ flexGrow: 1, color: 'black' }}>
-          WealthBeing
+    <AppBar position="static" sx={{ bgcolor: 'white', boxShadow: 1, minHeight: '80px' }}>
+      <Toolbar sx={{ minHeight: '80px !important', padding: '0 24px' }}>
+        <Typography variant="h3" className={`${pacifico.className} font-pacifico`} sx={{ flexGrow: 1, color: '#5fa3a6', fontFamily: 'Pacifico, cursive', fontSize: '2.5rem' }}>
+          WealthBeing 
         </Typography>
         <Box>
-          <IconButton href="/">
-            <Image src="/images/icons/homeIcon.png" alt="Home" width={32} height={32} />
+          <IconButton href="/" sx={{ padding: '12px', margin: '0 8px' }}>
+            <Image src="/images/icons/homeIcon.png" alt="Home" width={48} height={48} />
           </IconButton>
-          <IconButton href="/stats">
-            <Image src="/images/icons/analyticsIcon.png" alt="Stats" width={32} height={32} />
+          <IconButton href="/stats" sx={{ padding: '12px', margin: '0 8px' }}>
+            <Image src="/images/icons/analyticsIcon.png" alt="Stats" width={48} height={48} />
           </IconButton>
-          <IconButton href="/mood">
-            <Image src="/images/icons/moodIcon.png" alt="Mood" width={32} height={32} />
+          <IconButton href="/mood" sx={{ padding: '12px', margin: '0 8px' }}>
+            <Image src="/images/icons/moodIcon.png" alt="Mood" width={48} height={48} />
           </IconButton>
-          <IconButton href="/diary">
-            <Image src="/images/icons/diaryIcon.png" alt="Diary" width={32} height={32} />
+          <IconButton href="/diary" sx={{ padding: '12px', margin: '0 8px' }}>
+            <Image src="/images/icons/diaryIcon.png" alt="Diary" width={48} height={48} />
           </IconButton>
         </Box>
       </Toolbar>
