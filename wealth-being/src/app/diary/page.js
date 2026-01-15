@@ -9,6 +9,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Header from '../components/Header';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 
 
@@ -59,9 +60,9 @@ export default function DiaryPage() {
     }
 
     return (
-        <div style={{ flexGrow: 1 }}>
+        <Box sx={{ minHeight: '100vh', backgroundColor: '#E9F1EC', display: 'flex', flexDirection: 'column' }}>
             <Header />
-            <Container maxWidth="md" sx={{ mt: 6, px: 4 }}>
+            <Container maxWidth="md" sx={{ backgroundColor: '#FAFBF8', padding: 4, borderRadius: 2, mt: 2 }}>
                 <Typography variant="h2" gutterBottom sx={{ fontSize: '3rem', mb: 4 }}>
                     Daily Entry
                 </Typography>
@@ -81,7 +82,7 @@ export default function DiaryPage() {
                     <Button type="submit" variant="contained" sx={{ mt: 3, py: 2, px: 4, fontSize: '1.2rem' }}>Submit</Button>
                 </form>
                 
-                {/* Past Entries Section */}
+                {/* Past Entries */}
                 <div style={{ marginTop: '64px' }}>
                     <Typography variant="h2" gutterBottom sx={{ fontSize: '2.5rem', mb: 4 }}>
                         Past Entries
@@ -121,7 +122,6 @@ export default function DiaryPage() {
                     </div>
                 </div>
             </Container>
-
-        </div>
+        </Box>
     )
 }
