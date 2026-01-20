@@ -45,7 +45,7 @@ export default function loginPage() {
 
         if (data.valid) {
             console.log("login is valid!");
-            window.location.href = "/home";
+            window.location.href = "/dashboard";
         }
 
         else {
